@@ -5,8 +5,9 @@
     "android": "expo start --android",
     "ios": "expo start --ios",
     "start": "expo start",
-    "lint": "eslint \"**/*.{js,jsx,ts,tsx}\" && prettier -c \"**/*.{js,jsx,ts,tsx,json}\"",
-    "format": "eslint \"**/*.{js,jsx,ts,tsx}\" --fix && prettier \"**/*.{js,jsx,ts,tsx,json}\" --write",
+    "lint": "npx @biomejs/biome lint --write .",
+    "format": "npx @biomejs/biome format --write .",
+    "lint:fix": "npx @biomejs/biome check --write .",
     "web": "expo start --web"
   },
   "dependencies": {
@@ -33,9 +34,7 @@
   "main": "node_modules/expo/AppEntry.js",
   "expo": {
     "install": {
-      "exclude": [
-        "react-native-safe-area-context"
-      ]
+      "exclude": ["react-native-safe-area-context"]
     }
   },
   "private": true
