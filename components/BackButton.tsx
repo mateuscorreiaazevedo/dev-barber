@@ -1,23 +1,21 @@
+import styled from '@emotion/native'
 import { Feather } from '@expo/vector-icons'
-import { StyleSheet, Text, View } from 'react-native'
 
 export const BackButton = ({ onPress }: { onPress: () => void }) => {
   return (
-    <View style={styles.backButton}>
+    <BackButtonView>
       <Feather name="chevron-left" size={16} color="#007AFF" />
-      <Text style={styles.backButtonText} onPress={onPress}>
-        Back
-      </Text>
-    </View>
+      <BackButtonText onPress={onPress}>Back</BackButtonText>
+    </BackButtonView>
   )
 }
-const styles = StyleSheet.create({
-  backButton: {
-    flexDirection: 'row',
-    paddingLeft: 20,
-  },
-  backButtonText: {
-    color: '#007AFF',
-    marginLeft: 4,
-  },
-})
+
+const BackButtonView = styled.View`
+  flex-direction: row;
+  padding-left: 20px;
+`
+
+const BackButtonText = styled.Text`
+  margin-left: 4px;
+  color: #007aff;
+`
