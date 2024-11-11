@@ -46,9 +46,7 @@
   "main": "node_modules/expo/AppEntry.js",
   "expo": {
     "install": {
-      "exclude": [
-        "react-native-safe-area-context"
-      ]
+      "exclude": ["react-native-safe-area-context"]
     }
   },
   "private": true
