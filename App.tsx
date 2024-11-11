@@ -1,7 +1,12 @@
-import 'react-native-gesture-handler'
-
-import RootStack from './navigation'
+import { RootNavigation } from '@/presentation/navigation'
+import { HttpClientProvider } from '@/presentation/providers'
+import { StatusBar } from 'expo-status-bar'
 
 export default function App() {
-  return <RootStack />
+  return (
+    <HttpClientProvider>
+      <StatusBar style="light" />
+      <RootNavigation />
+    </HttpClientProvider>
+  )
 }
